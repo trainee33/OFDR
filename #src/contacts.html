@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('_head.html',{
+	"title":"Контакты"
+	})
+<body>
+   <div class="header__page-certification">
+      @@include('_header.html',{})
+   </div>   
+   <main class="certification-page page-contacts">
+      <div class="wrapper">
+         <nav class="breadcrums">
+               <ul class="breadcrums__list">
+                  <li><a href="" class="breadcrums__link">Главная</a></li>
+                  <li><span class="breadcrums__item">Контакты</span></li>
+               </ul>
+         </nav>
+         <div class="contacts-page">
+            <div class="contacts-page__info">               
+               <div class="contact-info">                  
+                  <div class="contact-info__address">
+                     <div class="contact-info__title">
+                        <h2>Контакты</h2>
+                        <p>Мы работаем по всей России</p>
+                     </div>
+                     <div class="contact-info__phone">
+                        <a href="tel:88001234567">8 800 000-00-00</a>
+                     </div>
+                     <div class="contact-info__email">
+                        <a href="mailto:email@email.com">email@email.com</a>
+                     </div>
+                     <div class="top-header__social social-contact">
+                        <a href="" class="social__icon icon_whatsapp">
+                           <img src="img/icons/whatsapp.png" alt="icon">
+                        </a>
+                        <a href="" class="social__icon icon_viber">
+                           <img src="img/icons/viber.png" alt="icon">
+                        </a>
+                        <a href="" class="social__icon icon_telegram">
+                           <img src="img/icons/telegram.png" alt="icon">
+                        </a>
+                     </div>
+                  </div>                  
+                  <div class="contact-info__qr qr-info">
+                     <div class="qr-info__img">
+                        <img src="img/page/Bitmap8.png" alt="qr">
+                     </div>
+                     <div class="qr-info__text">
+                        <h3>Все наши контакты в этом QR коде</h3>
+                        <p>Считать QR код Вы можете с помощью специального приложения для IOS или Android</p>
+                     </div>
+                  </div>
+               </div>   
+            </div>
+            <div class="contacts-page__form">
+               <form class="form-contact">
+                  <div class="form-contact__title">Форма обратной связи</div>
+                  <input type="text" class="input" name="name" placeholder="Как к Вам обращаться?">
+                  <textarea class="input" name="textarea" id="" cols="30" rows="10" placeholder="Желаемые документы"></textarea>
+                  <input type="tel" class="input" placeholder="+7 (__) __ - __ - __">
+                  <input type="email" class="input" name="email" placeholder="Email">
+                  <button class="submit contact__button btn form-btn">Отправить заявку</button>
+               </form>
+            </div>
+         </div>     
+      </div>
+      
+   </main>   
+	@@include('_footer.html',{})		
+	<!--@@include('_popup.html',{})-->
+	@@include('_js.html',{})
+</body>
+</html>

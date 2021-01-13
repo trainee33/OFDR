@@ -1,0 +1,171 @@
+.page-contacts {
+	background: url('../img/page/map\ of\ russia.png') center left no-repeat;
+}
+.contacts-page {
+	padding-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	@include lg-block {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	// .contacts-page__form
+	&__form {
+		width: 460px;
+		background-color: #88b0ed;
+		margin-bottom: 70px;
+		@include xs-block {
+			width: 300px;
+		}
+	}
+}
+.contact-info {
+	@include lg-block {
+		display: flex;
+	}
+	@include md-block {
+		flex-direction: column;
+		text-align: center;
+	}
+	// .contact-info__title
+	&__title {
+		h2 {
+			font-weight: 700;
+			font-size: 36px;
+			line-height: 46px;
+			margin: 0 0 10px 0;
+		}
+
+		p {
+			font-weight: 500;
+			font-size: 17px;
+			line-height: 20px;
+		}
+	}
+	// .contact-info__address
+	&__address {
+		margin: 50px 0 0;
+		@include lg-block {
+			margin: 0;
+		}
+		@include md-block {
+			margin: 0 auto;
+		}
+	}
+
+	// .contact-info__phone
+	&__phone {
+		margin-bottom: 20px;
+		a {
+			font-weight: 900;
+			font-size: 20px;
+			line-height: 24px;
+			color: #333333;
+			background: url('../img/icons/call-answer.svg') left no-repeat;
+			padding-left: 30px;
+		}
+	}
+
+	// .contact-info__email
+	&__email {
+		a {
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 21px;
+			color: #333333;
+			background: url('../img/icons/mail.svg') left no-repeat;
+			padding-left: 30px;
+		}
+	}
+	.social-contact {
+		margin: 50px 0;
+		@include md-block {
+			justify-content: center;
+		}
+	}
+}
+
+.qr-info {
+	display: flex;
+	margin: 0 0 50px;
+	@include xs-block {
+		flex-direction: column;
+		align-items: center;
+	}
+	// .qr-info__img
+	&__img {
+		width: 166px;
+		height: 162px;
+	}
+
+	// .qr-info__text
+	&__text {
+		max-width: 360px;
+		margin: 20px 0 0 20px;
+		@include sm-block {
+			max-width: 330px;
+			margin: 20px 0 0;
+		}
+		h3 {
+			font-weight: 900;
+			font-size: 18px;
+			line-height: 22px;
+			margin-bottom: 20px;
+		}
+		p {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
+}
+//===========================
+
+.form-contact {
+	max-width: 320px;
+	text-align: center;
+	margin: 0 auto;
+	// .form-contact__title
+	&__title {
+		font-weight: 800;
+		font-size: 29px;
+		line-height: 38px;
+		color: #ffffff;
+		margin-bottom: 25px;
+		padding-top: 30px;
+	}
+	input {
+		border: none;
+	}
+	textarea {
+		border: none;
+		padding: 10px 20px;
+		min-height: 120px;
+	}
+}
+.input {
+	width: 320px;
+	height: 40px;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 18px;
+	color: #7b7b7b;
+	box-sizing: border-box;
+	overflow: hidden;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	@include xs-block {
+		width: 280px;
+		margin: 0 10px 15px;
+	}
+}
+.form-btn {
+	margin: 15px 0 35px;
+	font-weight: 900;
+	font-size: 16px;
+	line-height: 19px;
+	@include md-block {
+		display: inline-flex;
+	}
+}

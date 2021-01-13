@@ -1,0 +1,320 @@
+// =====================================================================
+
+.header {
+	// .header__top
+
+	&__top {
+		position: relative;
+	}
+}
+.top-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 116px;
+	z-index: 10;
+	@include sm-block {
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+	// .top-header__info
+	&__info {
+		display: flex;
+		align-items: center;
+		@include sm-block {
+			margin-bottom: 10px;
+		}
+	}
+	// .top-header__social
+	&__social {
+		display: flex;
+	}
+	// .top-header__contact
+	&__contact {
+		display: flex;
+		align-items: center;
+	}
+}
+.info {
+	@include xs-block {
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+	// .info__logo
+	&__logo {
+		font-weight: 700;
+		font-size: 52px;
+		line-height: 63px;
+		color: #e1e1e1;
+		position: relative;
+		margin-right: 50px;
+		width: 147px;
+		cursor: pointer;
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		@include xs-block {
+			margin-right: 0;
+			font-size: 45px;
+			margin: 10px 0;
+		}
+		&:before {
+			position: absolute;
+			content: '';
+			width: 2px;
+			height: 40px;
+			top: 13px;
+			right: -25px;
+			background-color: #89afef;
+			@include xs-block {
+				display: none;
+			}
+		}
+	}
+
+	// .info__descriptions
+	&__descriptions {
+		width: 195px;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 16px;
+		color: #5d5d5d;
+		@media (min-width: 992px) {
+			&:hover {
+				text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			}
+		}
+	}
+}
+.social {
+	margin-left: 72px;
+	margin-right: 104px;
+	@include lg-block {
+		display: none;
+	}
+	// .social__whatsapp
+	&__icon {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: 43px;
+		height: 43px;
+		border-radius: 50%;
+		margin-right: 18px;
+		cursor: pointer;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+.icon_whatsapp {
+	background-color: #2dd038;
+	@media (min-width: 992px) {
+		&:hover {
+			box-shadow: 0px 8px 25px rgba(45, 208, 56, 0.497678);
+		}
+	}
+}
+.icon_viber {
+	background-color: #7b519d;
+	@media (min-width: 992px) {
+		&:hover {
+			box-shadow: 0px 8px 25px rgba(123, 81, 157, 0.503797);
+		}
+	}
+}
+.icon_telegram {
+	background-color: #5bbaf0;
+	@media (min-width: 992px) {
+		&:hover {
+			box-shadow: 0px 8px 25px rgba(91, 186, 240, 0.5);
+		}
+	}
+}
+.contact {
+	// .contact__info
+	&__info {
+		display: block;
+		text-align: right;
+		margin-right: 30px;
+		@include md-block {
+			margin-right: 70px;
+		}
+		@include xs-block {
+			margin-right: 0;
+		}
+		// .contact__info_phone
+		&_phone {
+			a {
+				color: #333333;
+				cursor: pointer;
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 24px;
+				padding-left: 25px;
+				background: url('../img/icons/call-answer.svg') left center no-repeat;
+			}
+			@media (min-width: 992px) {
+				&:hover {
+					text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				}
+			}
+		}
+
+		// .contact__info_email
+		&_email {
+			a {
+				padding-left: 25px;
+				display: inline-block;
+				font-weight: 500;
+				font-size: 17px;
+				line-height: 24px;
+				color: #333333;
+				cursor: pointer;
+				background: url('../img/icons/mail.svg') left center no-repeat;
+			}
+			@media (min-width: 992px) {
+				&:hover {
+					text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				}
+			}
+			@include sm-block {
+				display: none;
+			}
+		}
+	}
+
+	// .contact__button
+	&__button {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 21px;
+		text-align: center;
+		padding: 0;
+		width: 195px;
+		height: 44px;
+		text-transform: unset;
+		background: linear-gradient(90deg, #f6bd60 0%, #e88952 100%);
+		border-radius: 3px;
+		@media (min-width: 992px) {
+			&:hover {
+				box-shadow: 0px 8px 18px rgba(242, 147, 81, 0.450503);
+			}
+		}
+		@include md-block {
+			display: none;
+		}
+	}
+}
+
+//====================================================================================================
+.menu-header {
+	display: flex;
+	position: relative;
+	// .header-menu__burger
+	&__burger {
+		display: none;
+		width: 30px;
+		position: absolute;
+		top: 30px;
+		right: 0px;
+		cursor: pointer;
+		z-index: 15;
+		padding: 10px 6px;
+		span {
+			position: absolute;
+			top: 8px;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+			transition: all 0.3s;
+			&:first-child {
+				top: 0;
+			}
+			&:last-child {
+				top: auto;
+				bottom: 0;
+			}
+		}
+		&.active {
+			span {
+				transform: scale(0);
+				&:first-child {
+					transform: rotate(-45deg);
+					top: 8px;
+					background-color: #000;
+				}
+				&:last-child {
+					transform: rotate(45deg);
+					bottom: 8px;
+					background-color: #000;
+				}
+			}
+		}
+		@include md-block {
+			display: block;
+		}
+		@include sm-block {
+			margin-top: 20px;
+		}
+	}
+	// .header-menu__lines
+	&__lines {
+		position: relative;
+		height: 18px;
+	}
+	// .header-menu__body
+	&__body {
+		width: 100%;
+		position: absolute;
+		top: 116px;
+		left: 0;
+		z-index: 10;
+		@include md-block {
+			display: none;
+			background-color: #bbcef3;
+			border: 1px solid #fff;
+		}
+		@include xs-block {
+			top: 140px;
+		}
+	}
+	// .header-menu__list
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		@include md-block {
+			display: block;
+			padding: 30px;
+			text-align: center;
+			li {
+				margin-bottom: 30px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	// .header-menu__link
+	&__link {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 19px;
+		text-transform: uppercase;
+		color: #333333;
+		@media (min-width: 992px) {
+			&:hover {
+				text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			}
+		}
+		@include md-block {
+			font-size: 18px;
+			font-weight: 800;
+		}
+	}
+}
